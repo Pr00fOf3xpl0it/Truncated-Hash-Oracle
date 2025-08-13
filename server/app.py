@@ -1,4 +1,3 @@
-# FastAPI - Víctima: verificación con hash truncado + modo DEMO + modo CTF
 
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
@@ -68,8 +67,8 @@ def verify(req: VerifyReq):
     ok = hmac.compare_digest(target, req.proof_bits)
 
     if CTF_MODE and ok:
-        # Flag no revela el bitstring; ata el éxito a este msg concreto.
         flag = f"flag{{grover_ok::{req.msg}}}"
         return {"ok": True, "nbits": req.nbits, "flag": flag}
 
     return {"ok": ok, "nbits": req.nbits}
+
