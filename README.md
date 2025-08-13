@@ -1,3 +1,6 @@
+
+<img width="1536" height="1024" alt="ChatGPT Image 12 ago 2025, 08_25_58 p m" src="https://github.com/user-attachments/assets/254bd715-2e0b-4c0c-bf97-39bb797cf5b0" />
+
 # Truncated Hash Oracle Lab (Quantum-Aware Edition)
 
 ## Introducción
