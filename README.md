@@ -2,7 +2,8 @@
 
 ## Introducción
 
-En criptografía moderna, la seguridad de funciones hash y mecanismos de autenticación como **HMAC** se basa en la dificultad de encontrar colisiones o preimágenes.  
+En criptografía moderna, la seguridad de funciones hash y mecanismos de autenticación como **HMAC** se basa en la dificultad de encontrar colisiones o preimágenes.
+
 Sin embargo, con la computación cuántica surgen nuevos algoritmos, como **Grover's Algorithm**, que pueden reducir drásticamente el tiempo necesario para realizar estas búsquedas.
 
 Este laboratorio combina conceptos de criptografía clásica y computación cuántica para demostrar cómo **el truncamiento de hashes** reduce el espacio de búsqueda y cómo un algoritmo cuántico puede aprovechar esta reducción.
