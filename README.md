@@ -121,7 +121,11 @@ Por ejemplo, si `n = 40`:
 
 ## Notas finales
 
-Este laboratorio **no es vulnerable por sí mismo** en un entorno clásico si `n` es suficientemente grande, pero demuestra el riesgo potencial en un escenario cuántico.
+Este laboratorio no representa una vulnerabilidad práctica en un entorno clásico siempre que el valor de n sea suficientemente grande (por ejemplo, ≥128 bits), ya que la complejidad de un ataque por fuerza bruta sigue siendo inalcanzable con recursos convencionales.
+
+Sin embargo, su objetivo es puramente educativo: mostrar cómo el truncamiento del HMAC reduce el espacio de búsqueda y cómo un algoritmo cuántico como Grover podría explotar esta reducción para encontrar colisiones o preimágenes de forma más eficiente.
+
+De esta manera, el laboratorio permite observar el comportamiento del sistema bajo un modelo cuántico y comprender por qué el tamaño de la salida y la resistencia a ataques cuánticos son factores críticos en el diseño de sistemas criptográficos modernos.
 
 ---
 ## Creditos
