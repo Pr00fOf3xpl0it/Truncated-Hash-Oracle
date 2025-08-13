@@ -7,12 +7,10 @@ from qiskit import QuantumCircuit, transpile
 from qiskit_aer import Aer
 from qiskit_aer.noise import NoiseModel, thermal_relaxation_error, ReadoutError
 
-# Oráculo y difusión YA implementados (objeto "vulnerable" expuesto)
 from poc03_end_to_end.qiskit_impl.grover_oracle import oracle_mark_target, diffusion_operator
 
 API = "http://127.0.0.1:8008"
 
-# Silenciar logs ruidosos de IBM si existieran imports en tu entorno
 for name in ["qiskit_ibm_runtime", "qiskit_ibm_runtime.qiskit_runtime_service"]:
     logging.getLogger(name).setLevel(logging.ERROR)
 
@@ -24,7 +22,6 @@ def get_challenge(nbits: int) -> Tuple[str, int]:
     return j["msg"], j["nbits"]
 
 def challenge_debug(msg: str, nbits: int) -> str:
-    # SOLO para desarrollo (si el server habilitó LAB_DEBUG=1)
     r = requests.post(f"{API}/challenge_debug", json={"msg": msg, "nbits": nbits}, timeout=10)
     r.raise_for_status()
     return r.json()["target"]
@@ -39,7 +36,6 @@ def verify(msg: str, proof_bits: str, nbits: int) -> bool:
 
 # ---------------- Util / Ruido sintético (opcional) ----------------
 def make_noise_model_sintetico():
-    # NO es obligatorio usar ruido en el skeleton, pero se deja por si quieren probar
     noise = NoiseModel()
     t1, t2, gate_t = 100e-6, 80e-6, 2e-7
     relax_1q = thermal_relaxation_error(t1, t2, gate_t)
@@ -205,6 +201,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
