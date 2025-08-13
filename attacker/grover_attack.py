@@ -1,8 +1,3 @@
-# grover_attack.py — SKELETON (para completar en el reto)
-# Objetivo: armar un ataque de Grover end-to-end contra la API víctima.
-# - NO revela el candidato ganador.
-# - Devuelve métricas mínimas; el servidor (LAB_CTF=1) dará flag si aciertas.
-
 import argparse, requests, math, random, csv
 from dataclasses import dataclass
 from typing import Dict, Tuple, List, Optional
@@ -210,6 +205,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
